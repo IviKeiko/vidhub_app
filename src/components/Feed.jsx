@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
+import Sidebar from "./Sidebar";
+import { colors } from "../utils/constants";
 
 useState;
 function Feed() {
@@ -8,14 +10,15 @@ function Feed() {
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid #3d3d3d",
+          borderRight: `1px solid ${colors.light__violet}`,
           px: { sx: 0, md: 2 },
         }}
       >
+        <Sidebar />
         <Typography
           className="copyright"
           variant="body2"
-          sx={{ mt: 1.5, color: "#fff" }}
+          sx={{ mt: 1.5, color: colors.light__violet }}
         >
           Copyright 2023 VidHub
         </Typography>

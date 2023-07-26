@@ -12,7 +12,7 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
-export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
+// export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
@@ -34,6 +34,14 @@ export const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
+export const colors = {
+  green: "#7ed957",
+  vermilion: "#fc3132",
+  federal__blue: "#0c0c1f",
+  french__violet: "#7f21bb",
+  electric__indigo: "#6017e7",
+  light__violet: "  #ababc9",
+};
 export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
 export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
 export const demoVideoUrl = "/video/GDa8kZLNhJ4";

@@ -7,11 +7,12 @@ import {
   ChannelDetail,
   SearchFeed,
 } from "./components";
+import { colors } from "./utils/constants";
 
 function App() {
   return (
     <BrowserRouter>
-      <Box sx={{ background: "lightblue" }}>
+      <Box sx={{ background: colors.federal__blue }}>
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />

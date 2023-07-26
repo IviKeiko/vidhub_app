@@ -1,3 +1,11 @@
+* {
+  --green: #7ed957;
+  --vermilion: #fc3132;
+  --federal__blue: #0c0c1f;
+  --french__violet: #7f21bb;
+  --electric__indigo: #6017e7;
+  --light__violet: #ababc9;
+}
 html,
 body {
   margin: 0;
@@ -26,12 +34,12 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #fc1503 !important;
-  color: white !important;
+  background-color: var(--vermilion) !important;
+  color: var(--light__violet) !important;
 }
 
 .category-btn:hover span {
-  color: white !important;
+  color: var(--light__violet) !important;
 }
 
 .react-player {
@@ -43,6 +51,10 @@ a {
   border: none;
   outline: none;
   width: 350px;
+}
+
+::placeholder {
+  color: var(--federal__blue);
 }
 
 .category-btn {
