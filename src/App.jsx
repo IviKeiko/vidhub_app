@@ -11,7 +11,6 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <h2>test</h2>
       <Box sx={{ background: "lightblue" }}>
         <Navbar />
         <Routes>
