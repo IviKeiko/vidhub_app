@@ -12,12 +12,10 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
-// export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
-
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
-  { name: "JS Mastery", icon: <CodeIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
+  { name: "JavaScript", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
   { name: "NextJS", icon: <CodeIcon /> },
   { name: "Music", icon: <MusicNoteIcon /> },
@@ -35,12 +33,12 @@ export const categories = [
 ];
 
 export const colors = {
-  green: "#7ed957",
-  vermilion: "#fc3132",
-  federal__blue: "#0c0c1f",
-  french__violet: "#7f21bb",
-  electric__indigo: "#6017e7",
-  light__violet: "  #ababc9",
+  oxford__blue: "#01142e",
+  emerald: "#14bf67",
+  sapphire: "#3453a8",
+  air__force__blue: "#5c8ea4",
+  moonstone: "#6598a3",
+  columbia__blue: "#bfd5db",
 };
 export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
 export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";

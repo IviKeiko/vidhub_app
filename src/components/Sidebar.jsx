@@ -2,9 +2,8 @@ import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
 import { nanoid } from "nanoid";
 import { colors } from "../utils/constants";
-const selectedCategory = "New";
 
-function Sidebar() {
+function Sidebar({ selectedCategory, setSelectedCategory }) {
   return (
     <Stack
       direction="row"
@@ -17,19 +16,20 @@ function Sidebar() {
       {categories.map((category) => (
         <button
           className="category-btn"
+          onClick={() => setSelectedCategory(category.name)}
           key={nanoid()}
           style={{
-            background: category.name === selectedCategory && colors.vermilion,
+            background: category.name === selectedCategory && colors.emerald,
 
-            color: colors.light__violet,
+            color: colors.columbia__blue,
           }}
         >
           <span
             style={{
               color:
                 category.name === selectedCategory
-                  ? colors.light__violet
-                  : colors.vermilion,
+                  ? colors.columbia__blue
+                  : colors.emerald,
               marginRight: "15px",
             }}
           >

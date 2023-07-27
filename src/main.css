@@ -1,10 +1,10 @@
 * {
-  --green: #7ed957;
-  --vermilion: #fc3132;
-  --federal__blue: #0c0c1f;
-  --french__violet: #7f21bb;
-  --electric__indigo: #6017e7;
-  --light__violet: #ababc9;
+  --oxford__blue: #01142e;
+  --emerald: #14bf67;
+  --sapphire: #3453a8;
+  --air__force__blue: #5c8ea4;
+  --moonstone: #6598a3;
+  --columbia__blue: #bfd5db;
 }
 html,
 body {
@@ -34,12 +34,12 @@ a {
 }
 
 .category-btn:hover {
-  background-color: var(--vermilion) !important;
-  color: var(--light__violet) !important;
+  background-color: var(--emerald) !important;
+  color: var(--columbia__blue) !important;
 }
 
 .category-btn:hover span {
-  color: var(--light__violet) !important;
+  color: var(--oxford__blue) !important;
 }
 
 .react-player {
@@ -54,7 +54,7 @@ a {
 }
 
 ::placeholder {
-  color: var(--federal__blue);
+  color: var(--oxford__blue);
 }
 
 .category-btn {

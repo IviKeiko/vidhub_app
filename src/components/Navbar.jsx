@@ -1,7 +1,8 @@
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { colors } from "../utils/constants";
-// import { logo } from "../utils/constants";
+
+import logo from "../assets/logo.png";
 import SearchBar from "./SearchBar";
 function Navbar() {
   return (
@@ -11,13 +12,12 @@ function Navbar() {
       p={2}
       sx={{
         position: "sticky",
-        background: colors.federal__blue,
         top: 0,
         justifyContent: "space-between",
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img src="../utils/logo.png" alt="logo" height={45} />
+        <img src={logo} alt="logo" height={95} />
       </Link>
       <SearchBar />
     </Stack>
