@@ -14,7 +14,7 @@ function SearchBar() {
         pl: 2,
         boxShadow: "none",
         mr: { sm: 5 },
-        background: colors.light__violet,
+        background: colors.columbia__blue,
       }}
     >
       <input
@@ -23,10 +23,10 @@ function SearchBar() {
         value=""
         onChange={() => {}}
         style={{
-          background: colors.light__violet,
+          background: colors.columbia__blue,
         }}
       />
-      <IconButton type="submit" sx={{ p: "10px", color: colors.vermilion }}>
+      <IconButton type="submit" sx={{ p: "10px", color: colors.emerald }}>
         <Search />
       </IconButton>
     </Paper>

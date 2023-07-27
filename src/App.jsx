@@ -12,7 +12,7 @@ import { colors } from "./utils/constants";
 function App() {
   return (
     <BrowserRouter>
-      <Box sx={{ background: colors.federal__blue }}>
+      <Box sx={{ background: colors.oxford__blue }}>
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />
