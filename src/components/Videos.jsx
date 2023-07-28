@@ -12,7 +12,7 @@ function Videos({ videos }) {
         return (
           <Box key={nanoid()}>
             {video.id.videoId && <VideoCard video={video} />}
-            {/* {video.id.channelId && <ChannelCard channelDetail={video} />} */}
+            {video.id.channelId && <ChannelCard channelDetail={video} />}
           </Box>
         );
       })}
