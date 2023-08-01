@@ -4,10 +4,16 @@ import { VideoCard, ChannelCard } from "./";
 
 Stack;
 
-function Videos({ videos }) {
-  console.log(videos);
+function Videos({ videos, direction }) {
+  if (!videos?.length) return "Loading...";
   return (
-    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack
+      direction={direction || "row"}
+      flexWrap="wrap"
+      justifyContent="start"
+      alignItems="start"
+      gap={2}
+    >
       {videos.map((video) => {
         return (
           <Box key={nanoid()}>

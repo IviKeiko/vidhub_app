@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from "@mui/material";
-import { CheckCircle, Height } from "@mui/icons-material";
+import { CheckCircle } from "@mui/icons-material";
 import { colors } from "../utils/constants";
 import {
   demoThumbnailUrl,
@@ -19,7 +19,7 @@ function VideoCard({
   return (
     <Card
       sx={{
-        width: { md: "320px", xs: "100%" },
+        width: { xs: "94vw", sm: "358px", md: "320px" },
         boxShadow: "none",
         borderRadius: 0,
       }}
@@ -28,7 +28,14 @@ function VideoCard({
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
-          sx={{ width: 358, height: 180 }}
+          sx={{
+            width: {
+              xs: "100%",
+              sm: "358px",
+              md: "320px",
+            },
+            height: 180,
+          }}
         />
       </Link>
       <CardContent

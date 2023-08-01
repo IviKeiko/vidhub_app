@@ -5,10 +5,21 @@ import { Search } from "@mui/icons-material";
 import { colors } from "../utils/constants";
 
 function SearchBar() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (searchTerm) {
+      navigate(`/search/${searchTerm}`);
+      setSearchTerm("");
+    }
+  };
   return (
     <Paper
       component="form"
-      onSubmit={() => {}}
+      onSubmit={handleSubmit}
       sx={{
         borderRadius: 8,
         pl: 2,
@@ -20,8 +31,10 @@ function SearchBar() {
       <input
         className="search-bar"
         placeholder="search..."
-        value=""
-        onChange={() => {}}
+        value={searchTerm}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+        }}
         style={{
           background: colors.columbia__blue,
         }}
