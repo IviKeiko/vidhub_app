@@ -19,7 +19,7 @@ function VideoCard({
   return (
     <Card
       sx={{
-        width: { xs: "94vw", sm: "358px", md: "320px" },
+        width: { xs: "92vw", sm: "358px", md: "320px" },
         boxShadow: "none",
         borderRadius: 0,
       }}

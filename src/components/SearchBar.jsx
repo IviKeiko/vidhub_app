@@ -39,7 +39,11 @@ function SearchBar() {
           background: colors.columbia__blue,
         }}
       />
-      <IconButton type="submit" sx={{ p: "10px", color: colors.emerald }}>
+      <IconButton
+        type="submit"
+        sx={{ p: "10px", color: colors.emerald }}
+        aria-label="search"
+      >
         <Search />
       </IconButton>
     </Paper>

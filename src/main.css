@@ -101,3 +101,13 @@ a {
     width: 150px;
   }
 }
+@media screen and (max-width: 420px) {
+  .navbar {
+    flex-direction: column !important;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  .navbar img {
+    height: 40px;
+  }
+}

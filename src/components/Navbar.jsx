@@ -1,12 +1,12 @@
 import { Stack } from "@mui/material";
-import { Link } from "react-router-dom";
 import { colors } from "../utils/constants";
-
 import logo from "../assets/logo.png";
 import SearchBar from "./SearchBar";
+
 function Navbar() {
   return (
     <Stack
+      className="navbar"
       direction="row"
       alignItems="center"
       p={2}
@@ -14,11 +14,20 @@ function Navbar() {
         position: "sticky",
         top: 0,
         justifyContent: "space-between",
+        backgroundColor: colors.oxford__blue,
+        height: "75px",
+        zIndex: 999,
       }}
     >
-      <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="logo" height={75} />
-      </Link>
+      <img
+        src={logo}
+        alt="logo"
+        height={75}
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      />
       <SearchBar />
     </Stack>
   );
