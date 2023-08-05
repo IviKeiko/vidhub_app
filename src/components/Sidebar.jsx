@@ -19,29 +19,22 @@ function Sidebar({ selectedCategory, setSelectedCategory }) {
           onClick={() => setSelectedCategory(category.name)}
           key={nanoid()}
           style={{
-            background: category.name === selectedCategory && colors.emerald,
-
-            color: colors.columbia__blue,
+            background: category.name === selectedCategory && colors.watermelon,
+            color: category.name === selectedCategory && colors.neutral,
           }}
         >
           <span
             style={{
               color:
                 category.name === selectedCategory
-                  ? colors.columbia__blue
-                  : colors.emerald,
+                  ? colors.neutral
+                  : colors.watermelon,
               marginRight: "15px",
             }}
           >
             {category.icon}
           </span>
-          <span
-            style={{
-              opacity: category.name === selectedCategory ? "1" : "0.8",
-            }}
-          >
-            {category.name}
-          </span>
+          <span>{category.name}</span>
         </button>
       ))}
     </Stack>

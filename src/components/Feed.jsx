@@ -9,7 +9,11 @@ function Feed() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
-      setVideos(data.items);
+      /*playlists are excluded, they render as MUI Box 0px x 0px which causes layout issues*/
+      const filteredVideos = data.items.filter(
+        (item) => item.id.kind === "youtube#video"
+      );
+      setVideos(filteredVideos);
     });
   }, [selectedCategory]);
 
@@ -18,7 +22,7 @@ function Feed() {
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
-          borderRight: `1px solid ${colors.air__force__blue}`,
+          borderRight: `1px solid ${colors.watermelon}`,
           px: { sx: 0, md: 2 },
         }}
       >
@@ -29,7 +33,7 @@ function Feed() {
         <Typography
           className="copyright"
           variant="body2"
-          sx={{ mt: 1.5, color: colors.air__force__blue }}
+          sx={{ mt: 1.5, color: colors.carbon }}
         >
           Copyright 2023 VidHub
         </Typography>
@@ -39,10 +43,10 @@ function Feed() {
           variant="h4"
           fontWeight="bold"
           mb={2}
-          sx={{ color: colors.columbia__blue }}
+          sx={{ color: colors.watermelon }}
         >
           {selectedCategory}
-          <span style={{ color: colors.emerald }}> videos</span>
+          <span style={{ color: colors.charcoal }}> videos</span>
         </Typography>
         <Videos videos={videos} />
       </Box>

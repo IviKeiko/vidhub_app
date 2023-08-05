@@ -18,14 +18,15 @@ function SearchBar() {
   };
   return (
     <Paper
+      className="searchBar"
       component="form"
       onSubmit={handleSubmit}
       sx={{
-        borderRadius: 8,
+        borderRadius: 0,
         pl: 2,
         boxShadow: "none",
         mr: { sm: 5 },
-        background: colors.columbia__blue,
+        background: colors.neutral,
       }}
     >
       <input
@@ -36,12 +37,12 @@ function SearchBar() {
           setSearchTerm(e.target.value);
         }}
         style={{
-          background: colors.columbia__blue,
+          background: colors.neutral,
         }}
       />
       <IconButton
         type="submit"
-        sx={{ p: "10px", color: colors.emerald }}
+        sx={{ p: "10px", color: colors.watermelon }}
         aria-label="search"
       >
         <Search />

@@ -1,7 +1,7 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { demoProfilePicture } from "../utils/constants";
+
 import { colors } from "../utils/constants";
 
 function ChannelCard({ channelDetail, marginTop }) {
@@ -9,7 +9,6 @@ function ChannelCard({ channelDetail, marginTop }) {
     <Box
       sx={{
         boxShadow: "none",
-        borderRadius: "20px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -26,28 +25,34 @@ function ChannelCard({ channelDetail, marginTop }) {
             flexDirection: "column",
             justifyContent: "center",
             textAlign: "center",
-            color: colors.emerald,
+            color: colors.charcoal,
           }}
         >
           <CardMedia
-            image={
-              channelDetail?.snippet?.thumbnails?.high?.url ||
-              demoProfilePicture
-            }
+            image={channelDetail?.snippet?.thumbnails?.high?.url}
             alt={channelDetail?.snippet?.title}
             sx={{
               borderRadius: "50%",
               height: "180px",
               width: "180px",
               mb: 2,
-              border: `1px solid ${colors.columbia__blue} `,
             }}
           />
           <Typography variant="h6">
             {channelDetail?.snippet?.title}
             <CheckCircle
-              sx={{ fontSize: 14, color: colors.columbia__blue, ml: "5px" }}
+              sx={{ fontSize: 14, color: colors.watermelon, ml: "5px" }}
             />
+            <span
+              style={{
+                display: "block",
+                letterSpacing: 1.5,
+                color: colors.charcoal,
+                fontSize: "14px",
+              }}
+            >
+              channel
+            </span>
           </Typography>
           {channelDetail?.statistics?.subscriberCount && (
             <Typography>

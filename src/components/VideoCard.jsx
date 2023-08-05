@@ -2,13 +2,6 @@ import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { colors } from "../utils/constants";
-import {
-  demoThumbnailUrl,
-  demoVideoUrl,
-  demoVideoTitle,
-  demoChannelUrl,
-  demoChannelTitle,
-} from "../utils/constants";
 
 function VideoCard({
   video: {
@@ -24,7 +17,7 @@ function VideoCard({
         borderRadius: 0,
       }}
     >
-      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+      <Link to={videoId && `/video/${videoId}`}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
@@ -38,33 +31,25 @@ function VideoCard({
           }}
         />
       </Link>
-      <CardContent
-        sx={{ backgroundColor: colors.air__force__blue, height: "106px" }}
-      >
-        <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+      <CardContent sx={{ backgroundColor: colors.neutral, height: "106px" }}>
+        <Link to={videoId && `/video/${videoId}`}>
           <Typography
             variant="subtitle1"
             fontWeight="bold"
-            color={colors.oxford__blue}
+            color={colors.charcoal}
           >
-            {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
+            {snippet?.title.slice(0, 60)}
           </Typography>
         </Link>
-        <Link
-          to={
-            snippet?.channelId
-              ? `/channel/${snippet?.channelId}`
-              : demoChannelUrl
-          }
-        >
+        <Link to={snippet?.channelId && `/channel/${snippet?.channelId}`}>
           <Typography
             variant="subtitle2"
             fontWeight="bold"
-            color={colors.columbia__blue}
+            color={colors.charcoal}
           >
-            {snippet?.channelTitle || demoChannelTitle}
+            {snippet?.channelTitle}
             <CheckCircle
-              sx={{ fontSize: 12, color: colors.columbia__blue, ml: "5px" }}
+              sx={{ fontSize: 12, color: colors.watermelon, ml: "5px" }}
             />
           </Typography>
         </Link>

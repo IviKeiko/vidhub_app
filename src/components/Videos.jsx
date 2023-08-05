@@ -2,8 +2,6 @@ import { Stack, Box } from "@mui/material";
 import { nanoid } from "nanoid";
 import { VideoCard, ChannelCard } from "./";
 
-Stack;
-
 function Videos({ videos, direction }) {
   if (!videos?.length) return "Loading...";
   return (

@@ -33,18 +33,9 @@ export const categories = [
 ];
 
 export const colors = {
-  oxford__blue: "#01142e",
-  emerald: "#14bf67",
-  sapphire: "#3453a8",
-  air__force__blue: "#5c8ea4",
-  moonstone: "#6598a3",
-  columbia__blue: "#bfd5db",
+  sky: "#c6dbf0",
+  carbon: "#a9a9a9",
+  watermelon: "#ff3b3f",
+  neutral: "#efefef",
+  charcoal: "#2e4057",
 };
-export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
-export const demoVideoUrl = "/video/GDa8kZLNhJ4";
-export const demoChannelTitle = "JavaScript Mastery";
-export const demoVideoTitle =
-  "Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI";
-export const demoProfilePicture =
-  "http://dergipark.org.tr/assets/app/images/buddy_sample.png";

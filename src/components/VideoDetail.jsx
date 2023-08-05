@@ -32,14 +32,21 @@ function VideoDetail() {
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
-          <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+          <Box
+            sx={{
+              width: "100%",
+              position: "sticky",
+              top: "86px",
+              background: colors.neutral,
+            }}
+          >
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               className="react-player"
               controls
             />
             <Typography
-              color={colors.columbia__blue}
+              color={colors.charcoal}
               variant="h5"
               fontWeight="bold"
               p={2}
@@ -49,7 +56,7 @@ function VideoDetail() {
             <Stack
               direction="row"
               justifyContent="space-between"
-              sx={{ color: colors.emerald }}
+              sx={{ color: colors.charcoal }}
               py={1}
               px={2}
             >
@@ -59,19 +66,23 @@ function VideoDetail() {
                     sm: "subtitle1",
                     md: "h6",
                   }}
-                  sx={{ color: colors.emerald }}
+                  sx={{ color: colors.charcoal }}
                 >
                   {channelTitle}
                   <CheckCircle
-                    sx={{ fontSize: "12px", color: colors.emerald, ml: "5px" }}
+                    sx={{
+                      fontSize: "12px",
+                      color: colors.watermelon,
+                      ml: "5px",
+                    }}
                   />
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography variant="body1" fontWeight="bold">
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography variant="body1" fontWeight="bold">
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
               </Stack>
